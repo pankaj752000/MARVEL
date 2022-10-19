@@ -1,0 +1,302 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  background-color: #55a07c;
+  gap: 2rem;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.8rem;
+  align-items: flex-end;
+}
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.btn {
+  background-color: #6639d1;
+  padding: 0.4rem 2rem;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px black;
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+.goBackToWelcome {
+  text-decoration: underline;
+  color: blue;
+  font-weight: 500;
+  text-transform: lowercase;
+  font-size: 1rem;
+}
+
+/* ------------------ login-page -------------- */
+.header ul {
+  display: flex;
+  justify-content: space-between;
+  background-color: #7d4b4b;
+}
+.header ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  width: 100%;
+  height: 3rem;
+  transition: all 0.4s ease;
+}
+.header ul li:hover {
+  background-color: rgb(255, 255, 255);
+}
+.header ul li a {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.login-container {
+  height: 30vh;
+}
+.login-container h2 {
+  font-weight: 500;
+}
+.login-container h2 span {
+  font-weight: 600;
+}
+
+/* ---------------- chat page ------------- */
+.chat-header ul li:nth-child(1) {
+  background-color: white;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin-top: 2rem;
+  height: 65vh;
+  /* background-color: #66FFFF; */
+}
+
+.chats p {
+  margin: 0.4rem;
+}
+
+.chat-container h2 {
+  font-weight: 400;
+}
+
+.chat-container .chats {
+  margin: 10px 0;
+  height: 80%;
+  width: 100vw;
+  border: 1px solid black;
+  border-radius: 4px;
+  overflow: scroll;
+}
+.chat-bottom {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 10px;
+}
+.chat-bottom input {
+  position: relative;
+  border: 2px solid black;
+  height: 30px;
+  width: 60vw;
+  border-radius: 5px;
+}
+.chat-container button {
+  border-radius: 5px;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+.users-header ul li:nth-child(2) {
+  background-color: white;
+}
+.users-heading {
+  margin: 2rem 1rem;
+}
+.tables {
+  width: 100vw;
+  background-color: #bfbfbf;
+  border: 2px solid black;
+  border-radius: 6px;
+}
+
+.tables tr:nth-child(even) {
+  background-color: white;
+}
+.tables tr:nth-child(1) {
+  color: white;
+  background-color: #3f3f3fdc;
+}
+.tables tr td {
+  padding: 0.7rem;
+}
+.update-user,
+.delete-user {
+  cursor: pointer;
+}
+.tables tr td:nth-child(2) {
+  text-align: center;
+}
+
+/* ------------ manage documents / upload users----------- */
+.upload-header ul li:nth-child(3) {
+  background-color: white;
+}
+
+.uploads {
+  height: 12rem;
+  overflow: auto;
+}
+.uploads .tables {
+  width: 100%;
+}
+.shared-uploads {
+  position: relative;
+}
+.uploadDocBtn {
+  bottom: 5%;
+  left: 3%;
+  position: absolute;
+}
+
+.upload-modal,
+.delete-modal {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  min-width: 30rem;
+  height: 220px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.632);
+}
+/* -------- for popup model hide and show---- */
+.hide-upload-modal {
+  display: none;
+}
+/* ------------------------ */
+.upload-modal-header,
+.delete-modal-header {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2rem;
+  border-bottom: 2px solid black;
+}
+.close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 3px;
+  border: 2px solid black;
+  width: 20px;
+  height: 20px;
+  padding: 0.6rem;
+}
+.close:hover {
+  border: 2px solid red;
+  background-color: red;
+  color: white;
+}
+
+.upload-btns a {
+  display: inline-block;
+  padding: 0.5rem;
+  width: 8rem;
+  text-align: center;
+}
+
+.upload-features ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.file-input li:nth-child(2) {
+  flex: 2;
+  text-align: center;
+}
+.upload-btns li:nth-child(2) {
+  flex: 2;
+  text-align: left;
+  margin-left: 1rem;
+}
+.edit-doc-btns li:nth-child(1) {
+  flex: 4;
+  text-align: right;
+  margin-left: 1rem;
+}
+.edit-doc-label,
+.file-desc {
+  width: 18rem;
+  height: 1.6rem;
+}
+
+/* -----------Delete Modal---------- */
+
+.delete-modal {
+  min-width: 20rem;
+  height: 200px;
+}
+
+.delete-modal img {
+  width: 48px;
+}
+.delete-modal-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 80%;
+}
+.delete-modal-body div:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.delete-modal-buttons {
+  display: flex;
+  gap: 2rem;
+}
+.delete-modal-buttons a {
+  background-color: white;
+  border: 2px solid black;
+}
+.delete-modal-buttons a:hover {
+  border-color: blue;
+}

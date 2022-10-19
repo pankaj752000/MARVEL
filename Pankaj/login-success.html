@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./assets/styles/style.css" />
+</head>
+
+<!-- -----if user is not logged in then he/she cannot see the login success page -->
+<script>
+  let User = JSON.parse(localStorage.getItem("currentUser"));
+  if (User == null) {
+    window.location = "./login.html";
+  }
+</script>
+
+<body>
+  <div class="header">
+    <ul>
+      <li><a href="./usersList.html">Manage Users</a></li>
+      <li><a class="logout">Logout</a></li>
+    </ul>
+  </div>
+  <div class="container login-container">
+    <h1>Login Successful</h1>
+    <h2>
+      <span>Welcome !</span> <span class="loggedInUser">jatin@gmail.com</span>
+    </h2>
+  </div>
+</body>
+<script src="./assets/scripts/app.js"></script>
+
+</html>

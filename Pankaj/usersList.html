@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./assets/styles/style.css" />
+</head>
+
+<!-- -----if user is not logged in then he/she cannot see the Users list page -->
+<script>
+  let User = JSON.parse(localStorage.getItem("currentUser"));
+  if (User == null) {
+    window.location = "./login.html";
+  }
+</script>
+
+<body>
+  <div class="header users-header">
+    <ul>
+      <li><a href="#">Manage Users</a></li>
+      <li><a class="logout">Logout</a></li>
+    </ul>
+  </div>
+  <h2 class="users-heading">Users</h2>
+  <!-- -------------- users List ------------ -->
+  <table class="users-container tables">
+    <tr>
+      <td>Name</td>
+      <td>Email ID</td>
+      <td></td>
+    </tr>
+  </table>
+
+  <!-- ---------- Delete Modal --------------- -->
+  <div class="delete-modal hide-upload-modal">
+    <ul class="delete-modal-header">
+      <li></li>
+      <li>Confirm User Deletion</li>
+      <li class="close">X</li>
+    </ul>
+    <div class="delete-modal-body">
+      <div>
+        <img src="./assets/images/question-mark.png" alt="img">
+        <p>Are Your Sure ?</p>
+      </div>
+      <div class="delete-modal-buttons">
+        <a href="#" class="btn confirm-delete-user">Ok</a>
+        <a href="#" class="btn cancel-delete">Cancel</a>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="./assets/scripts/app.js"></script>
+
+</html>
